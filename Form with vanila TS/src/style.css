@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box; /* More detail:  https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+  font-family: "Vazirmatn", sans-serif; /* More detail:  https://developer.mozilla.org/en-US/docs/Web/CSS/font-family (❤️ rastikerdar) */
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background-color: #dfd0b8;
+  display: grid;
+  place-items: center;
+  /* 
+  Also we can use flexbox for centering our form
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  padding: 1rem;
+}
+
+/* More detail:  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors */
+.form {
+  width: 100%;
+  max-width: 500px; /*  To prevent our form from getting too big on large screens. like : PC Monitors and etc */
+  background-color: #fef4e5;
+  border: 2px solid #948979;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form > label {
+  font-weight: 600;
+  color: #292d33;
+  display: block;
+}
+
+.form > label::after {
+  content: " :"; /* We simply add ":" to the rest of our Labels. */
+}
+
+.form > input:not([type="submit"]) {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #d8d8d8;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.form > input[type="submit"] {
+  margin-top: 10px;
+  background: #393e46;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.form > input[type="submit"]:hover {
+  background-color: #292d33;
+  cursor: pointer;
+}
+
+/* More detail: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries */
+@media (max-width: 400px) {
+  .form {
+    padding: 1rem;
+  }
+  .form > input {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,32 @@
+<!-- https://developer.mozilla.org/en-US/docs/Glossary/Doctype -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Viewport_meta_element -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- To prevent JavaScript code from blocking the rendering of the page, we use the defer keyword. 
+     JavaScript code is executed until the rendering is complete. 
+     In this case, JavaScript code is downloaded but executed after the rendering is complete. -->
+    <script src="../dist/script.js" defer></script>
+  </head>
+  <body>
+    <form class="form" id="form">
+      <label for="firstname">نام</label>
+      <input type="text" id="firstname" name="firstname" placeholder="نام" />
+      <label for="lastname">نام خانوادگی</label>
+      <input type="text" id="lastname" name="lastname" placeholder="نام خانوادگی" />
+      <label for="username">نام کاربری</label>
+      <input type="text" id="username" name="username" placeholder="نام کاربری" />
+      <label for="password">رمز عبور</label>
+      <input type="password" id="password" name="password" placeholder="رمز عبور" />
+      <label for="confirm_password">تکرار رمز عبور</label>
+      <input type="password" id="confirm_password" name="confirm_password" placeholder="تکرار رمز عبور" />
+      <input type="submit" id="submit" value="ثبت اطلاعات" />
+    </form>
+  </body>
+</html>
