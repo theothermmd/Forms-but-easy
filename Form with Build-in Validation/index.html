@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100...900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./dest/script.js" defer></script>
+    <title>فرم با صحت سنجی داخلی مرورگر</title>
+  </head>
+  <body>
+    <form name="myform" id="myform">
+      <h1>فرم با صحت سنجی داخلی مرورگر</h1>
+      <div class="input_elements">
+        <div class="input_and_labels">
+          <label for="fullname">نام و نام خانوادگی</label>
+          <input type="text" name="fullname" id="fullname" placeholder="برای مثال : مجید کرم پور" required />
+        </div>
+        <div class="input_and_labels">
+          <label for="username">نام کاربری</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            required
+            minlength="3"
+            placeholder="برای مثال : majid_karami"
+          />
+        </div>
+        <div class="input_and_labels">
+          <label for="password">رمز عبور</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="برای مثال : Ab00d24%$dc99"
+            required
+            minlength="8"
+            maxlength="16"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
+          />
+          <div class="information">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+              />
+            </svg>
+            <p>رمزتون باید شامل حروف بزرگ و کوچک و همچنین اعداد و علامت باشه.</p>
+          </div>
+        </div>
+
+        <input type="submit" id="submit" value="ثبت اطلاعات" />
+      </div>
+    </form>
+  </body>
+</html>
